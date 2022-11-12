@@ -1,0 +1,172 @@
+{%load static%}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link href="{% static 'css/style.css'%}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style_bar.css'%}" />
+    <link rel="icon" href="{% static 'img/icon.png'%}">
+
+
+    <script
+    src="https://kit.fontawesome.com/7e5b2d153f.js"
+    crossorigin="anonymous"
+  ></script>
+
+  <script defer src="{% static 'js/index.js'%}"></script>
+
+    <title>Cifrados | modelos de seguridad 2022</title>
+ </head>
+ 
+
+
+
+
+  <body>
+
+
+
+    <header class="header">
+        <nav class="nav">
+          <a href="#" class="logo nav-link">GMS</a>
+          <button class="nav-toggle" aria-label="Abrir menú">
+            <i class="fas fa-bars"></i>
+          </button>
+          <ul class="nav-menu">
+            <li class="nav-menu-item">
+              <a href="{% url 'inicio'%}" class="nav-menu-link nav-link">cifrado MD5</a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="{% url 'sha1' %}" class="nav-menu-link nav-link">cifrado SHA1</a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="{% url 'sha256' %}" class="nav-menu-link nav-link">cifrado SHA224</a>
+            </li>
+           
+          </ul>
+        </nav>
+      </header>
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+
+
+
+
+
+
+    
+<style>
+    .register-bg {
+    background-image: url('static/img/malware.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+  }
+  .alerta{
+    margin-top: 5%;
+    width: 100%;
+  }
+  .alerta p{
+    margin:0%;
+    width: 100%;
+    color: rgb(0, 0, 0);
+  }
+
+  .barra{
+    background-color: blue;
+  }
+  header{
+    background-color: black;
+  }
+  body{
+    background-color: black;
+  }
+
+  </style>
+    
+  {%block content%}
+   <section class="contact-box">
+
+
+
+     <div class="row no-gutters bg-dark">
+        <div class="col-xl-5 col-lg-12 register-bg">
+            <div class="position-absolute testiomonial p-4">
+                <h3 class="font-weight-bold text-light">La siguiente revolución digital.</h3>
+                <p class="lead text-light">La nueva etapa de la revolución digital se aproxima.</p>
+            </div>
+           </div>
+           <div class="col-xl-7 col-lg-12 d-flex">
+                <div class="container align-self-center p-6">
+                    <h1 class="font-weight-bold mb-3">Cifrado MD5</h1>
+                    
+                    <p class="text-muted mb-5">Ingrese la cadena de texto que quiere cifrar</p>
+
+                    <form method="POST">
+                        {%csrf_token%}
+                        <div class="form-row mb-2">
+                            <div class="form-group col-md-6">
+                                <label class="font-weight-bold">Texto a cifrar <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" placeholder="cadena de texto a cifrar" name="cifrado" required>
+                            </div>
+                           
+                        <button class="btn btn-primary width-100" type="submit">Cifrar</button>
+
+                        <h1 class="font-weight-bold mb-3">resultado</h1>
+
+                        <div class="alert alert-warning alerta">
+                            <p><b>Paalabra a cifrar:</b> {{palabra}}</p>
+                            <p>{{cifrado}}</p>
+                            
+                        </div>
+                    </form>
+                    
+                </div>
+                <small class="d-inline-block text-muted mt-5">Todos los derechos reservados | © 2022 ReSilJar S.A.S</small>
+
+                
+
+
+
+
+
+
+
+           </div>
+       </div>
+       
+   </section>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    {%endblock%}
+  </body>
+</html>
