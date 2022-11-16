@@ -38,11 +38,12 @@
    
                           <h1 class="font-weight-bold mb-3">resultado</h1>
    
-                          <div class="alert alert-warning alerta">
-                              <p><b>Paalabra a cifrar:</b> {{palabra}}</p>
-                              <p>{{cifrado}}</p>
-                              
-                          </div>
+                          <div class="container"  disabled=disabled>
+                            Palabra a cifrar: {{palabra}}
+                                <textarea class="form-control" rows="1" disabled>
+                                   {{cifrado}}
+                                </textarea>
+                    </div>
                       </form>
                       
                   </div>
